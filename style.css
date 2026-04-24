@@ -1,70 +1,114 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
-body{background:#111;color:#fff;scroll-behavior:smooth;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
 
-nav ul{display:flex;justify-content:center;gap:2rem;padding:1rem;flex-wrap:wrap;}
-nav a{color:white;text-decoration:none;font-weight:600;}
-nav a:hover{color:#00a8ff;}
+body{
+background:#111;
+color:#fff;
+}
 
-section{padding:60px 20px;text-align:center;}
+/* NAV */
+nav ul{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+padding:10px;
+list-style:none;
+}
 
-.hero-content{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:14px;
+}
+
+/* HERO */
+#home{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+position:relative;
 }
 
 .hero-profile{
-width:150px;
+width:120px;
+height:120px;
 border-radius:50%;
 border:3px solid #00a8ff;
 margin-bottom:10px;
 }
 
-h2{color:#00a8ff;margin-bottom:20px;}
+h1{
+font-size:26px;
+margin-bottom:10px;
+}
 
 .btn{
-display:inline-block;
-margin-top:10px;
-padding:10px 20px;
 background:#00a8ff;
-color:white;
+padding:8px 18px;
 border-radius:20px;
+color:white;
 text-decoration:none;
-transition:0.3s;
-}
-.btn:hover{background:#0097e6;}
-
-.projects-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+font-size:14px;
 }
 
-.project-card{
-background:#222;
-padding:20px;
-border-radius:10px;
-transition:0.3s;
-}
-.project-card:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 20px rgba(0,0,0,0.5);
+/* SECTIONS */
+section{
+padding:40px 20px;
+text-align:center;
 }
 
-.skill{margin-bottom:15px;}
-.skill-bar{background:#333;height:10px;border-radius:5px;}
-.skill-progress{background:#00a8ff;height:10px;border-radius:5px;}
+h2{
+margin-bottom:20px;
+color:#00a8ff;
+}
 
-.timeline-item{
+/* CARDS */
+.card{
 background:#222;
 padding:15px;
 margin:10px 0;
-border-left:4px solid #00a8ff;
+border-radius:8px;
 }
 
+/* SKILL */
+.skill{
+margin:10px 0;
+}
+
+.bar{
+background:#333;
+height:8px;
+border-radius:5px;
+}
+
+.bar div{
+background:#00a8ff;
+height:8px;
+border-radius:5px;
+}
+
+/* FOOTER */
 footer{
 text-align:center;
-padding:20px;
+padding:10px;
 background:#0a3d62;
+font-size:14px;
+}
+
+/* CANVAS */
+canvas{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
 }
