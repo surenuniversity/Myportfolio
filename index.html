@@ -11,16 +11,20 @@
 
 <body>
 
-<!-- NAVBAR -->
+<!-- 🔥 NAVBAR -->
 <header>
 <nav>
-<ul>
+<div class="logo">Suren</div>
+
+<div class="menu-toggle" id="menu-toggle">
+☰
+</div>
+
+<ul id="nav-links">
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
-<li><a href="#experience">Experience</a></li>
 <li><a href="#projects">Projects</a></li>
-<li><a href="#education">Education</a></li>
 <li><a href="#certifications">Certificates</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
@@ -31,10 +35,10 @@
 <section id="home">
 <canvas id="hero-canvas"></canvas>
 
-<div class="hero-content">
-<img src="WhatsApp Image 2025-09-06 at 15.04.26_69cf976b.jpg" class="hero-profile" alt="Profile">
+<div class="hero-content glass">
+<img src="WhatsApp Image 2025-09-06 at 15.04.26_69cf976b.jpg" class="hero-profile">
 <h1>Hello, I'm Suren</h1>
-<p>Embedded Systems Engineer</p>
+<p><span id="typing"></span></p>
 <a href="#contact" class="btn">Contact Me</a>
 </div>
 </section>
@@ -42,46 +46,16 @@
 <!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
-<p>
-Embedded Systems Engineer passionate about IoT, microcontrollers, and scalable hardware design.
-Focused on building efficient, real-world embedded solutions.
-</p>
+<p>I design embedded systems, IoT devices, and scalable microcontroller architectures.</p>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
 
-<div class="skill">
-<p>Embedded C</p>
-<div class="bar"><div style="width:85%"></div></div>
-</div>
-
-<div class="skill">
-<p>ESP32 / STM32</p>
-<div class="bar"><div style="width:90%"></div></div>
-</div>
-
-<div class="skill">
-<p>PCB Design</p>
-<div class="bar"><div style="width:80%"></div></div>
-</div>
-
-<div class="skill">
-<p>IoT Systems</p>
-<div class="bar"><div style="width:85%"></div></div>
-</div>
-
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-<h2>Experience</h2>
-
-<div class="timeline-item">
-<h3>Embedded Engineer</h3>
-<p>Worked on microcontroller programming, circuit design, and embedded system development.</p>
-</div>
+<div class="skill"><p>Embedded C</p><div class="bar"><div style="width:85%"></div></div></div>
+<div class="skill"><p>ESP32 / STM32</p><div class="bar"><div style="width:90%"></div></div></div>
+<div class="skill"><p>PCB Design</p><div class="bar"><div style="width:80%"></div></div></div>
 
 </section>
 
@@ -89,50 +63,38 @@ Focused on building efficient, real-world embedded solutions.
 <section id="projects">
 <h2>Projects</h2>
 
-<div class="card">
+<div class="card glass">
 <h3>Modular MCU Platform</h3>
-<p>Scalable microcontroller system supporting interchangeable processors with different pin configurations.</p>
-<a href="https://github.com/surenuniversity/modular-mcu-platform" target="_blank" class="btn">View Project</a>
+<p>Interchangeable processor embedded system.</p>
+<a href="https://github.com/surenuniversity/modular-mcu-platform" target="_blank" class="btn">View</a>
 </div>
 
-<div class="card">
+<div class="card glass">
 <h3>ESP32 AI Chatbot</h3>
-<p>Embedded AI chatbot using ESP32 with cloud API integration for real-time interaction.</p>
-<a href="https://github.com/surenuniversity/esp32-ai-chatbot" target="_blank" class="btn">View Project</a>
+<p>AI chatbot using cloud API.</p>
+<a href="https://github.com/surenuniversity/esp32-ai-chatbot" target="_blank" class="btn">View</a>
 </div>
 
-<div class="card">
-<h3>ESP32 Cloud Storage Server</h3>
-<p>IoT-based cloud storage system using ESP32 with external storage integration.</p>
-<a href="https://github.com/surenuniversity/esp32-cloud-storage-server" target="_blank" class="btn">View Project</a>
+<div class="card glass">
+<h3>ESP32 Cloud Server</h3>
+<p>IoT cloud storage system.</p>
+<a href="https://github.com/surenuniversity/esp32-cloud-storage-server" target="_blank" class="btn">View</a>
 </div>
 
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-<h2>Education</h2>
-<p>Anna University — Bachelor of Electrical & Electronics Engineering</p>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section id="certifications">
 <h2>Certificates</h2>
 
-<div class="card">
+<div class="card glass">
 <h3>Embedded Internship</h3>
-<p>Chipscrafts Internship Program</p>
-<a href="https://drive.google.com/file/d/1GHlzTr3wjAJ2aiGZaNDzuW0nZsAFbsxY/view?usp=sharing" target="_blank" class="btn">
-View Certificate
-</a>
+<a href="https://drive.google.com/file/d/1GHlzTr3wjAJ2aiGZaNDzuW0nZsAFbsxY/view?usp=sharing" target="_blank" class="btn">View</a>
 </div>
 
-<div class="card">
-<h3>PCB Design Certification</h3>
-<p>PCB Design and Development Training</p>
-<a href="https://drive.google.com/file/d/1IBfkFmNJYZS6_BPMPqTasZU5WjZk3FiV/view?usp=sharing" target="_blank" class="btn">
-View Certificate
-</a>
+<div class="card glass">
+<h3>PCB Design</h3>
+<a href="https://drive.google.com/file/d/1IBfkFmNJYZS6_BPMPqTasZU5WjZk3FiV/view?usp=sharing" target="_blank" class="btn">View</a>
 </div>
 
 </section>
@@ -142,15 +104,12 @@ View Certificate
 <h2>Contact</h2>
 <p>Email: surenuniversity@gmail.com</p>
 <p>Phone: +91-8825438852</p>
-<p>Location: Chennai, India</p>
 </section>
 
-<!-- FOOTER -->
 <footer>
-<p>© 2026 Suren | All Rights Reserved</p>
+<p>© 2026 Suren</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
