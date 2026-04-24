@@ -1,22 +1,21 @@
-const canvas = document.getElementById('hero-canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("hero-canvas");
+const ctx = canvas.getContext("2d");
 
-function resizeCanvas(){
+function resize(){
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 }
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
+resize();
+window.addEventListener("resize", resize);
 
 let particles = [];
 
-for(let i=0;i<100;i++){
+for(let i=0;i<80;i++){
 particles.push({
 x:Math.random()*canvas.width,
 y:Math.random()*canvas.height,
-dx:(Math.random()-0.5)*1.5,
-dy:(Math.random()-0.5)*1.5,
-r:Math.random()*2+1
+dx:(Math.random()-0.5)*1,
+dy:(Math.random()-0.5)*1
 });
 }
 
@@ -26,7 +25,7 @@ ctx.fillRect(0,0,canvas.width,canvas.height);
 
 particles.forEach(p=>{
 ctx.beginPath();
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.arc(p.x,p.y,2,0,Math.PI*2);
 ctx.fillStyle="#00a8ff";
 ctx.fill();
 
@@ -39,5 +38,4 @@ if(p.y<0||p.y>canvas.height)p.dy*=-1;
 
 requestAnimationFrame(animate);
 }
-
 animate();
