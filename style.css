@@ -1,29 +1,44 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins;
-}
-
-body{
-background:#111;
-color:#fff;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+body{background:#0a0a0a;color:white;}
 
 /* NAV */
-nav ul{
+nav{
 display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:12px;
-padding:12px;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+}
+
+.logo{font-weight:bold;color:#00a8ff;}
+
+#nav-links{
+display:flex;
+gap:15px;
 list-style:none;
 }
 
-nav a{
-color:#fff;
-text-decoration:none;
-font-size:14px;
+#nav-links a{color:white;text-decoration:none;}
+
+.menu-toggle{
+display:none;
+font-size:24px;
+cursor:pointer;
+}
+
+/* MOBILE MENU */
+@media(max-width:768px){
+#nav-links{
+display:none;
+flex-direction:column;
+position:absolute;
+top:60px;
+right:0;
+background:#111;
+width:200px;
+padding:10px;
+}
+#nav-links.active{display:flex;}
+.menu-toggle{display:block;}
 }
 
 /* HERO */
@@ -32,107 +47,56 @@ height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-flex-direction:column;
-text-align:center;
 position:relative;
-padding:20px;
 }
 
 .hero-profile{
 width:120px;
-height:120px;
 border-radius:50%;
 border:3px solid #00a8ff;
 margin-bottom:15px;
 }
 
-h1{
-font-size:26px;
-margin-bottom:10px;
+/* GLASS EFFECT */
+.glass{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+padding:20px;
+border-radius:15px;
 }
 
-/* BUTTON (🔥 FIXED SPACING) */
+/* BUTTON */
 .btn{
 display:inline-block;
-margin-top:25px;
-padding:10px 22px;
+margin-top:15px;
+padding:10px 20px;
 background:#00a8ff;
+border-radius:20px;
 color:white;
-border-radius:25px;
 text-decoration:none;
-font-size:14px;
 transition:0.3s;
 }
-
-.btn:hover{
-background:#0097e6;
-}
+.btn:hover{box-shadow:0 0 15px #00a8ff;}
 
 /* SECTIONS */
-section{
-padding:60px 20px;
-text-align:center;
-}
+section{padding:60px 20px;text-align:center;}
 
-h2{
-margin-bottom:25px;
-color:#00a8ff;
-}
+h2{color:#00a8ff;margin-bottom:20px;}
 
-/* CARDS (🔥 FIXED GAP) */
+/* CARDS */
 .card{
-background:#222;
-padding:20px;
 margin:20px 0;
-border-radius:10px;
+padding:20px;
 transition:0.3s;
 }
-
 .card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 20px rgba(0,0,0,0.5);
+transform:translateY(-8px);
+box-shadow:0 0 20px #00a8ff;
 }
 
 /* SKILLS */
-.skill{
-margin:15px 0;
-}
-
-.bar{
-background:#333;
-height:8px;
-border-radius:5px;
-margin-top:5px;
-}
-
-.bar div{
-background:#00a8ff;
-height:8px;
-border-radius:5px;
-}
-
-/* TIMELINE */
-.timeline-item{
-background:#222;
-padding:15px;
-margin:20px 0;
-border-left:4px solid #00a8ff;
-}
+.bar{background:#333;height:8px;border-radius:5px;}
+.bar div{background:#00a8ff;height:8px;border-radius:5px;}
 
 /* FOOTER */
-footer{
-text-align:center;
-padding:15px;
-background:#0a3d62;
-font-size:14px;
-}
-
-/* CANVAS */
-canvas{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-1;
-}
+footer{text-align:center;padding:20px;background:#0a3d62;}
